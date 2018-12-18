@@ -1,0 +1,1319 @@
+  844  history
+osgdev@Capstone-031:~/ansilab$ cd ..
+osgdev@Capstone-031:~$ ls
+7March                                       Music
+ansible.cfg                                  myArtifactory
+ansible.conf                                 myDownloads
+ansilab                                      myEditor
+ap                                           mySonarQube
+apache7                                      mytomcat
+bintray-jfrog-artifactory-pro-rpms.repo      Pictures
+bintray-jfrog-artifactory-pro-rpms.reposudo  Public
+bintray-jfrog-artifactory-rpms.repo          sources.list
+day11.log                                    Templates
+Desktop                                      TRIAL
+Documents                                    tsclient
+Downloads                                    Videos
+eclipse                                      wgetrc.bak
+eclipse-workspace                            workspace
+jenkinplugin
+osgdev@Capstone-031:~$ ls myDownloads
+apache-tomcat-7.0.82.tar.gz
+apache-tomcat-8.5.27-src.tar.gz
+apache-tomcat-8.5.27.tar.gz
+eclipse-inst-linux64.tar.gz
+eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz
+gedit_3.10.4-0ubuntu4_amd64.deb
+jenkins.tar
+jenkins.war
+uex-16.1.0.22_amd64.tar.gz
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ mkdir tomcat
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  day11.log  file1     new_test  roles  tomcat
+ansiserver   day12.log  file.yml  prasanna  test
+osgdev@Capstone-031:~/ansilab$ ls tomcat
+osgdev@Capstone-031:~/ansilab$ ls tomcat
+apache-tomcat-7.0.82
+osgdev@Capstone-031:~/ansilab$ osgdev@Capstone-031:~$ 2R11;rgb:fffff/ffff/ffff1;4205;0c2R11;rgb:ffff/ffff/ffff1;4205;0c2R11;rgb:ffff/ffff/ffff1;4205;0c2R11;rgb:ffff/ffff/ffff1;4205;0c
+2R11: command not found
+bash: rgb:ffff/ffff/ffff1: No such file or directory
+4205: command not found
+0c2R11: command not found
+bash: rgb:ffff/ffff/ffff1: No such file or directory
+4205: command not found
+0c2R11: command not found
+bash: rgb:ffff/ffff/ffff1: No such file or directory
+4205: command not found
+0c2R11: command not found
+bash: rgb:ffff/ffff/ffff1: No such file or directory
+4205: command not found
+0c2R11: command not found
+bash: rgb:ffff/ffff/ffff1: No such file or directory
+4205: command not found
+0c: command not found
+osgdev@Capstone-031:~$ ^C
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  day13th.1.log  nodejs  roles  tomcat
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping
+ [WARNING]: Could not match supplied host pattern, ignoring: all
+
+ [WARNING]: provided hosts list is empty, only localhost is available
+
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ rm -rf ansible.cfg
+osgdev@Capstone-031:~/ansilab$ cd ..
+osgdev@Capstone-031:~$ rm -rf ansible.cfg
+osgdev@Capstone-031:~$ ls
+ls: cannot access 'tsclient': Transport endpoint is not connected
+7March                                       myDownloads
+ansible.conf                                 myEditor
+ansilab                                      mySonarQube
+ap                                           mytomcat
+apache7                                      nodejs
+bintray-jfrog-artifactory-pro-rpms.repo      Pictures
+bintray-jfrog-artifactory-pro-rpms.reposudo  Public
+bintray-jfrog-artifactory-rpms.repo          role
+day11.log                                    roles
+day13.log                                    sources.list
+Desktop                                      Templates
+dockerlab                                    TRIAL
+Documents                                    tsclient
+Downloads                                    Videos
+eclipse                                      wgetrc.bak
+eclipse-workspace                            whale
+jenkinplugin                                 Wipro
+Music                                        wipro-gcc
+myArtifactory                                workspace
+osgdev@Capstone-031:~$ ansible --version
+ansible 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/osgdev/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.12 (default, Dec  4 2017, 14:50:18) [GCC 5.4.0 20160609]
+osgdev@Capstone-031:~$ vi /etc/ansible/ansible.cfg
+osgdev@Capstone-031:~$ vi /etc/ansible/hosts
+osgdev@Capstone-031:~$ pwd
+/home/osgdev
+osgdev@Capstone-031:~$ ls
+ls: cannot access 'tsclient': Transport endpoint is not connected
+7March                                       myDownloads
+ansible.conf                                 myEditor
+ansilab                                      mySonarQube
+ap                                           mytomcat
+apache7                                      nodejs
+bintray-jfrog-artifactory-pro-rpms.repo      Pictures
+bintray-jfrog-artifactory-pro-rpms.reposudo  Public
+bintray-jfrog-artifactory-rpms.repo          role
+day11.log                                    roles
+day13.log                                    sources.list
+Desktop                                      Templates
+dockerlab                                    TRIAL
+Documents                                    tsclient
+Downloads                                    Videos
+eclipse                                      wgetrc.bak
+eclipse-workspace                            whale
+jenkinplugin                                 Wipro
+Music                                        wipro-gcc
+myArtifactory                                workspace
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ls
+ansiserver  day13th.1.log  nodejs  roles  tomcat
+osgdev@Capstone-031:~/ansilab$ rm -rf *
+osgdev@Capstone-031:~/ansilab$ ls
+osgdev@Capstone-031:~/ansilab$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	Capstone-031.wipro.com Capstone-031
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+osgdev@Capstone-031:~/ansilab$ ansible all -i 'localhost,' -m ping -c local
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+cat: ansiserver: No such file or directory
+osgdev@Capstone-031:~/ansilab$ vi ansiserver
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost
+osgdev@Capstone-031:~/ansilab$ ansible all -i '/home/osgdev/ansilab/ansiserver,' -m ping -c local
+/home/osgdev/ansilab/ansiserver | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible local -i '/home/osgdev/ansilab/ansiserver,' -m ping -c local
+ [WARNING]: Could not match supplied host pattern, ignoring: local
+
+ [WARNING]: No hosts matched, nothing to do
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -i '/home/osgdev/ansilab/ansiserver,' -m ping -c local
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible local -i '/home/osgdev/ansilab/ansiserver,' -m ping -c local
+ [WARNING]: Could not match supplied host pattern, ignoring: local
+
+ [WARNING]: No hosts matched, nothing to do
+
+osgdev@Capstone-031:~/ansilab$ ansible local -i '/home/osgdev/ansilab/ansiserver' -m ping -c local
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible local -i '/home/osgdev/ansilab/ansiserver' -m ping -c local
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ pwd
+/home/osgdev/ansilab
+osgdev@Capstone-031:~/ansilab$ ls
+ansiserver
+osgdev@Capstone-031:~/ansilab$ vi ansible.cfg
+osgdev@Capstone-031:~/ansilab$ cat ansible.cfg
+[defaults]
+inventory = /home/osgdev/ansilab/ansiserver
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping -c local
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping 
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping -k -u osgdev
+SSH password: 
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost
+osgdev@Capstone-031:~/ansilab$ vi ansiserver
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	Capstone-031.wipro.com Capstone-031
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+osgdev@Capstone-031:~/ansilab$ vi ansiserver
+osgdev@Capstone-031:~/ansilab$ vi ansiserver
+osgdev@Capstone-031:~/ansilab$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	Capstone-031.wipro.com Capstone-031
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031
+Usage: ansible <host-pattern> [options]
+
+Define and run a single task 'playbook' against a set of hosts
+
+Options:
+  -a MODULE_ARGS, --args=MODULE_ARGS
+                        module arguments
+  --ask-vault-pass      ask for vault password
+  -B SECONDS, --background=SECONDS
+                        run asynchronously, failing after X seconds
+                        (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some
+                        of the changes that may occur
+  -D, --diff            when changing (small) files and templates, show the
+                        differences in those files; works great with --check
+  -e EXTRA_VARS, --extra-vars=EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if
+                        filename prepend with @
+  -f FORKS, --forks=FORKS
+                        specify number of parallel processes to use
+                        (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory=INVENTORY, --inventory-file=INVENTORY
+                        specify inventory host path or comma separated host
+                        list. --inventory-file is deprecated
+  -l SUBSET, --limit=SUBSET
+                        further limit selected hosts to an additional pattern
+  --list-hosts          outputs a list of matching hosts; does not execute
+                        anything else
+  -m MODULE_NAME, --module-name=MODULE_NAME
+                        module name to execute (default=command)
+  -M MODULE_PATH, --module-path=MODULE_PATH
+                        prepend colon-separated path(s) to module library
+                        (default=[u'/home/osgdev/.ansible/plugins/modules',
+                        u'/usr/share/ansible/plugins/modules'])
+  --new-vault-id=NEW_VAULT_ID
+                        the new vault identity to use for rekey
+  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
+                        new vault password file for rekey
+  -o, --one-line        condense output
+  -P POLL_INTERVAL, --poll=POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  --syntax-check        perform a syntax check on the playbook, but do not
+                        execute it
+  -t TREE, --tree=TREE  log output to this directory
+  --vault-id=VAULT_IDS  the vault identity to use
+  --vault-password-file=VAULT_PASSWORD_FILES
+                        vault password file
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+  Connection Options:
+    control as whom and how to connect to hosts
+
+    -k, --ask-pass      ask for connection password
+    --private-key=PRIVATE_KEY_FILE, --key-file=PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+    -u REMOTE_USER, --user=REMOTE_USER
+                        connect as this user (default=None)
+    -c CONNECTION, --connection=CONNECTION
+                        connection type to use (default=smart)
+    -T TIMEOUT, --timeout=TIMEOUT
+                        override the connection timeout in seconds
+                        (default=10)
+    --ssh-common-args=SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g.
+                        ProxyCommand)
+    --sftp-extra-args=SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f,
+                        -l)
+    --scp-extra-args=SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+    --ssh-extra-args=SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+
+  Privilege Escalation Options:
+    control how and which user you become as on target hosts
+
+    -s, --sudo          run operations with sudo (nopasswd) (deprecated, use
+                        become)
+    -U SUDO_USER, --sudo-user=SUDO_USER
+                        desired sudo user (default=root) (deprecated, use
+                        become)
+    -S, --su            run operations with su (deprecated, use become)
+    -R SU_USER, --su-user=SU_USER
+                        run operations with su as this user (default=None)
+                        (deprecated, use become)
+    -b, --become        run operations with become (does not imply password
+                        prompting)
+    --become-method=BECOME_METHOD
+                        privilege escalation method to use (default=sudo),
+                        valid choices: [ sudo | su | pbrun | pfexec | doas |
+                        dzdo | ksu | runas | pmrun ]
+    --become-user=BECOME_USER
+                        run operations as this user (default=root)
+    --ask-sudo-pass     ask for sudo password (deprecated, use become)
+    --ask-su-pass       ask for su password (deprecated, use become)
+    -K, --ask-become-pass
+                        ask for privilege escalation password
+
+Some modules do not make sense in Ad-Hoc (include, meta, etc)
+ERROR! No argument passed to command module
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031 -m ping -k -u osgdev
+SSH password: 
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ping Capstone-031
+PING Capstone-031.wipro.com (127.0.1.1) 56(84) bytes of data.
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=1 ttl=64 time=0.145 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=2 ttl=64 time=0.062 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=3 ttl=64 time=0.056 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=4 ttl=64 time=0.074 ms
+^C
+--- Capstone-031.wipro.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 2998ms
+rtt min/avg/max/mdev = 0.056/0.084/0.145/0.036 ms
+osgdev@Capstone-031:~/ansilab$ ssh osgdev@Capstone-031
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue Jun 12 09:43:38 2018 from 127.0.0.1
+osgdev@Capstone-031:~$ exit
+logout
+Connection to capstone-031 closed.
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031 -m ping -k -u osgdev
+SSH password: 
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031 -m ping -k 
+SSH password: 
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ls ~/.ssh/
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+osgdev@Capstone-031:~/ansilab$ ssh osgdev@Capstone-031
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue Jun 12 09:45:31 2018 from 127.0.0.1
+osgdev@Capstone-031:~$ ansible Capstone-031 -m ping
+ [WARNING]: Could not match supplied host pattern, ignoring: all
+
+ [WARNING]: provided hosts list is empty, only localhost is available
+
+ [WARNING]: Could not match supplied host pattern, ignoring: Capstone-031
+
+ [WARNING]: No hosts matched, nothing to do
+
+osgdev@Capstone-031:~$ logout
+Connection to capstone-031 closed.
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031 -m ping
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible local -m ping
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible all -m ping
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	Capstone-031.wipro.com Capstone-031
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+osgdev@Capstone-031:~/ansilab$ ping Capstone-031.wipro.com
+PING Capstone-031.wipro.com (127.0.1.1) 56(84) bytes of data.
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=1 ttl=64 time=0.053 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=2 ttl=64 time=0.042 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=3 ttl=64 time=0.059 ms
+64 bytes from Capstone-031.wipro.com (127.0.1.1): icmp_seq=4 ttl=64 time=0.050 ms
+^C
+--- Capstone-031.wipro.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 2997ms
+rtt min/avg/max/mdev = 0.042/0.051/0.059/0.006 ms
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+osgdev@Capstone-031:~/ansilab$ vi ansiserver
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+Capstone-031.wipro.com hostname=127.0.0.1 ansible_ssh_user=osgdev
+
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031.wipro.com -m ping
+The authenticity of host 'capstone-031.wipro.com (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cajiFI0f4f+cYAGtWNyWgZsOmghVjHzgu7HeS/BGRZI.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Capstone-031.wipro.com | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031.wipro.com -m ping -k -u osgdev
+SSH password: 
+Capstone-031.wipro.com | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ssh osgdev@Capstone-031.wipro.com
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue Jun 12 09:51:05 2018 from 127.0.0.1
+osgdev@Capstone-031:~$ exit
+logout
+Connection to capstone-031.wipro.com closed.
+osgdev@Capstone-031:~/ansilab$ ssh o^Cdev@Capstone-031.wipro.com
+osgdev@Capstone-031:~/ansilab$ ansible Capstone-031.wipro.com -m ping
+Capstone-031.wipro.com | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible all -m ping
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+Capstone-031.wipro.com | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+Capstone-031 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+Capstone-031.wipro.com hostname=127.0.0.1 ansible_ssh_user=osgdev
+
+osgdev@Capstone-031:~/ansilab$ ansible --list-hosts all
+  hosts (3):
+    localhost
+    Capstone-031
+    Capstone-031.wipro.com
+osgdev@Capstone-031:~/ansilab$ ansible --list-hosts local
+  hosts (3):
+    localhost
+    Capstone-031
+    Capstone-031.wipro.com
+osgdev@Capstone-031:~/ansilab$ ansible --list-hosts localhost
+  hosts (1):
+    localhost
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver
+osgdev@Capstone-031:~/ansilab$ ansible-galaxy init ./roles/nodejs
+- ./roles/nodejs was created successfully
+osgdev@Capstone-031:~/ansilab$ scprit day13.log
+scprit: command not found
+osgdev@Capstone-031:~/ansilab$ script day13.log
+Script started, file is day13.log
+osgdev@Capstone-031:~/ansilab$ tree ./roles/nodejs
+./roles/nodejs
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 8 files
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/Downloads
+geckodriver-v0.19.1-linux64.tar.gz
+jdk-8u171-linux-x64.tar.gz
+jdk-8u172-linux-i586.tar.gz
+jdk-8u172-linux-x64.tar.gz
+jfrog-artifactory-oss-5.9.0-sources.tar.gz
+jfrog-artifactory-pro-5.9.0(1).zip
+jfrog-artifactory-pro-5.9.0.zip
+node-v8.11.2-linux-x64.tar.xz
+settings.old.xml
+settings.xml
+sonarqube-6.4.zip
+sonarqube-6.7.2.zip
+osgdev@Capstone-031:~/ansilab$ mkdir nodejs
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  day13.log  nodejs  roles
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/node.yml
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook ./roles/nodejs/node.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  day13.log  nodejs  roles
+osgdev@Capstone-031:~/ansilab$ cd nodejs
+osgdev@Capstone-031:~/ansilab/nodejs$ ls
+osgdev@Capstone-031:~/ansilab/nodejs$ vi ./roles/nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab/nodejs$ cd ..
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook ./roles/nodejs/node.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ cd nodejs
+osgdev@Capstone-031:~/ansilab/nodejs$ ls
+osgdev@Capstone-031:~/ansilab/nodejs$ cd ..
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/tasks/main.ymlosgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  day13.log  nodejs  roles
+osgdev@Capstone-031:~/ansilab$ vi nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab$ vi ./nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab$ tree ./roles/nodejs
+./roles/nodejs
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── node.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 9 files
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/tasks/main.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook ./roles/nodejs/node.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ vi ./roles/nodejs/tasks/main.ymlosgdev@Capstone-031:~/ansilab$ ansible-playbook ./roles/nodejs/node.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  day13.log  nodejs  roles
+osgdev@Capstone-031:~/ansilab$ cat ansible.cfg
+[defaults]
+inventory = /home/osgdev/ansilab/ansiserver
+osgdev@Capstone-031:~/ansilab$ vi ansible.cfg
+osgdev@Capstone-031:~/ansilab$ cat ansible.cfg
+[defaults]
+inventory = /home/osgdev/ansilab/ansiserver
+log_path = /home/osgdev/ansilab/ansible.log
+osgdev@Capstone-031:~/ansilab$ cat ansiserver
+[local]
+localhost ansible_connection=local
+Capstone-031 hostname=127.0.0.1 ansible_ssh_user=osgdev
+Capstone-031.wipro.com hostname=127.0.0.1 ansible_ssh_user=osgdev
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m ping
+localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ cat ansible.log
+2018-06-12 10:14:36,612 p=16542 u=osgdev |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m command -a 'echo "Hello world"'
+localhost | SUCCESS | rc=0 >>
+Hello world
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost  -a 'echo "Hello world"'
+localhost | SUCCESS | rc=0 >>
+Hello world
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost  -a 'hostname'
+localhost | SUCCESS | rc=0 >>
+Capstone-031
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m command -a 'cat /etc/resolv.conf'
+localhost | SUCCESS | rc=0 >>
+# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
+#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN
+nameserver 10.198.50.100
+nameserver 10.198.50.200
+search wipro.com
+
+osgdev@Capstone-031:~/ansilab$ pwd
+/home/osgdev/ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a 'touch /home/osgdev/ansilab/newfile'
+ [WARNING]: Consider using file module with state=touch rather than running
+touch
+
+localhost | SUCCESS | rc=0 >>
+
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m file -a 'touch /home/osgdev/ansilab/newfile state=touch'
+ERROR! this task 'file' has extra params, which is only allowed in the following modules: command, win_command, shell, win_shell, script, include, include_vars, include_tasks, include_role, import_tasks, import_role, add_host, group_by, set_fact, raw, meta
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: this task 'file' has extra params, which is only allowed in the following modules: command, win_command, shell, win_shell, script, include, include_vars, include_tasks, include_role, import_tasks, import_role, add_host, group_by, set_fact, raw, meta
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m file -a 'path=/home/osgdev/ansilab/newfile state=touch'
+localhost | SUCCESS => {
+    "changed": true, 
+    "dest": "/home/osgdev/ansilab/newfile", 
+    "gid": 999, 
+    "group": "docker", 
+    "mode": "0644", 
+    "owner": "osgdev", 
+    "size": 0, 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  newfile  roles
+ansible.log  day13.log   nodejs
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m file -a 'path=/home/osgdev/ansilab/newfile state=file'
+localhost | SUCCESS => {
+    "changed": false, 
+    "gid": 999, 
+    "group": "docker", 
+    "mode": "0644", 
+    "owner": "osgdev", 
+    "path": "/home/osgdev/ansilab/newfile", 
+    "size": 0, 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  newfile  roles
+ansible.log  day13.log   nodejs
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m file -a 'path=/home/osgdev/ansilab/newfile state=absent'
+localhost | SUCCESS => {
+    "changed": true, 
+    "path": "/home/osgdev/ansilab/newfile", 
+    "state": "absent"
+}
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansible.log  ansiserver  day13.log  nodejs  roles
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m copy -a 'src=/home/osgdev/ansilab/ansible.log dest=/home/osgdev/ansilab/ansible.txt'
+localhost | SUCCESS => {
+    "changed": true, 
+    "checksum": "46e752a49d768928ab80c3eb861dab820d00bea5", 
+    "dest": "/home/osgdev/ansilab/ansible.txt", 
+    "gid": 999, 
+    "group": "docker", 
+    "md5sum": "8bafea3b4bb549fa3c086da2eeb8c10a", 
+    "mode": "0644", 
+    "owner": "osgdev", 
+    "size": 2210, 
+    "src": "/home/osgdev/.ansible/tmp/ansible-tmp-1528779154.53-105153835776817/source", 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansible.txt  day13.log  roles
+ansible.log  ansiserver   nodejs
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/myDownloads
+apache-tomcat-7.0.82.tar.gz
+apache-tomcat-8.5.27-src.tar.gz
+apache-tomcat-8.5.27.tar.gz
+eclipse-inst-linux64.tar.gz
+eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz
+gedit_3.10.4-0ubuntu4_amd64.deb
+jenkins.tar
+jenkins.war
+uex-16.1.0.22_amd64.tar.gz
+osgdev@Capstone-031:~/ansilab$ mkdir /home/osgdev/resources
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m unarchive -a 'src=/home/osgdev/myDownloads/apache-tomcat-7.0.82.tar.gz dest=/home/osgdev/resources'
+localhost | SUCCESS => {
+    "changed": true, 
+    "dest": "/home/osgdev/resources", 
+    "extract_results": {
+        "cmd": [
+            "/bin/tar", 
+            "--extract", 
+            "-C", 
+            "/home/osgdev/resources", 
+            "-z", 
+            "-f", 
+            "/home/osgdev/.ansible/tmp/ansible-tmp-1528779268.79-140910945439678/source"
+        ], 
+        "err": "", 
+        "out": "", 
+        "rc": 0
+    }, 
+    "gid": 999, 
+    "group": "docker", 
+    "handler": "TgzArchive", 
+    "mode": "0755", 
+    "owner": "osgdev", 
+    "size": 4096, 
+    "src": "/home/osgdev/.ansible/tmp/ansible-tmp-1528779268.79-140910945439678/source", 
+    "state": "directory", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls resources
+ls: cannot access 'resources': No such file or directory
+osgdev@Capstone-031:~/ansilab$ cd ..
+osgdev@Capstone-031:~$ ls
+ls: cannot access 'tsclient': Transport endpoint is not connected
+7March                                       myEditor
+ansible.conf                                 mySonarQube
+ansilab                                      mytomcat
+ap                                           nodejs
+apache7                                      Pictures
+bintray-jfrog-artifactory-pro-rpms.repo      Public
+bintray-jfrog-artifactory-pro-rpms.reposudo  resources
+bintray-jfrog-artifactory-rpms.repo          role
+day11.log                                    roles
+day13.log                                    sources.list
+Desktop                                      Templates
+dockerlab                                    TRIAL
+Documents                                    tsclient
+Downloads                                    Videos
+eclipse                                      wgetrc.bak
+eclipse-workspace                            whale
+jenkinplugin                                 Wipro
+Music                                        wipro-gcc
+myArtifactory                                workspace
+myDownloads
+osgdev@Capstone-031:~$ cd resources
+osgdev@Capstone-031:~/resources$ ls
+apache-tomcat-7.0.82
+osgdev@Capstone-031:~/resources$ cd ansilab
+bash: cd: ansilab: No such file or directory
+osgdev@Capstone-031:~/resources$ cd ..
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/resources
+apache-tomcat-7.0.82
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ ls
+bin   lib      logs    RELEASE-NOTES  temp     work
+conf  LICENSE  NOTICE  RUNNING.txt    webapps
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+catalina.policy      logging.properties  web.xml
+catalina.properties  server.xml
+context.xml          tomcat-users.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ cd ~/resources/apache-tomcat-7.0.82/conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ pwd
+/home/osgdev/resources/apache-tomcat-7.0.82/conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd 
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m copy -a 'src=/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml dest=/home/osgdev/resources/server.xml.j2'
+localhost | SUCCESS => {
+    "changed": true, 
+    "checksum": "25600058d66af3bf06aef984ff6f8edf7a30296e", 
+    "dest": "/home/osgdev/resources/server.xml.j2", 
+    "gid": 999, 
+    "group": "docker", 
+    "md5sum": "373c91717b983d735c7b1c64d8cf41c5", 
+    "mode": "0644", 
+    "owner": "osgdev", 
+    "size": 6613, 
+    "src": "/home/osgdev/.ansible/tmp/ansible-tmp-1528779560.85-91807768532183/source", 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/resources
+apache-tomcat-7.0.82  server.xml.j2
+osgdev@Capstone-031:~/ansilab$ cat server.xml.j2
+cat: server.xml.j2: No such file or directory
+osgdev@Capstone-031:~/ansilab$ vi server.xml.j2
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82/conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+catalina.policy      logging.properties  web.xml
+catalina.properties  server.xml
+context.xml          tomcat-users.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cat server/xml
+cat: server/xml: No such file or directory
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd ..
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m copy -a 'src=/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml dest=/home/osgdev/resources/server.xml.j2'^C
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m copy -a 'src=/home/osgdev/resources/server.xml.j2 dest=/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml'
+localhost | SUCCESS => {
+    "changed": true, 
+    "checksum": "25600058d66af3bf06aef984ff6f8edf7a30296e", 
+    "dest": "/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml", 
+    "gid": 999, 
+    "group": "docker", 
+    "md5sum": "373c91717b983d735c7b1c64d8cf41c5", 
+    "mode": "0600", 
+    "owner": "osgdev", 
+    "size": 6613, 
+    "src": "/home/osgdev/.ansible/tmp/ansible-tmp-1528780043.86-17776465459331/source", 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml
+/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82/conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+catalina.policy      logging.properties  web.xml
+catalina.properties  server.xml
+context.xml          tomcat-users.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd /home/osgdev/resources/server.xml.j2
+bash: cd: /home/osgdev/resources/server.xml.j2: Not a directory
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd /home/osgdev/resources
+osgdev@Capstone-031:~/resources$ ls
+apache-tomcat-7.0.82  server.xml.j2
+osgdev@Capstone-031:~/resources$ vi server.xml.j2
+osgdev@Capstone-031:~/resources$ cd ..
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansible.txt  day13.log  roles
+ansible.log  ansiserver   nodejs     server.xml.j2
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resorces/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | FAILED | rc=127 >>
+/bin/sh: 1: /home/osgdev/resorces/apache-tomcat-7.0.82/bin/startup.sh: not foundnon-zero return code
+
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ ls
+bin   lib      logs    RELEASE-NOTES  temp     work
+conf  LICENSE  NOTICE  RUNNING.txt    webapps
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd bin
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ ls
+bootstrap.jar                 setclasspath.sh
+catalina.bat                  shutdown.bat
+catalina.sh                   shutdown.sh
+catalina-tasks.xml            startup.bat
+commons-daemon.jar            startup.sh
+commons-daemon-native.tar.gz  tomcat-juli.jar
+configtest.bat                tomcat-native.tar.gz
+configtest.sh                 tool-wrapper.bat
+daemon.sh                     tool-wrapper.sh
+digest.bat                    version.bat
+digest.sh                     version.sh
+setclasspath.bat
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ pwd
+/home/osgdev/resources/apache-tomcat-7.0.82/bin
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ cd ..
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansilbe localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+No command 'ansilbe' found, did you mean:
+ Command 'ansible' from package 'ansible' (universe)
+ansilbe: command not found
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | SUCCESS | rc=0 >>
+Tomcat started.
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | SUCCESS | rc=0 >>
+Tomcat started.
+
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ ls
+bin   lib      logs    RELEASE-NOTES  temp     work
+conf  LICENSE  NOTICE  RUNNING.txt    webapps
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd bin
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ ls
+bootstrap.jar                 setclasspath.sh
+catalina.bat                  shutdown.bat
+catalina.sh                   shutdown.sh
+catalina-tasks.xml            startup.bat
+commons-daemon.jar            startup.sh
+commons-daemon-native.tar.gz  tomcat-juli.jar
+configtest.bat                tomcat-native.tar.gz
+configtest.sh                 tool-wrapper.bat
+daemon.sh                     tool-wrapper.sh
+digest.bat                    version.bat
+digest.sh                     version.sh
+setclasspath.bat
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ cd ..
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+Catalina             context.xml         tomcat-users.xml
+catalina.policy      logging.properties  web.xml
+catalina.properties  server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/myDownloads
+apache-tomcat-7.0.82.tar.gz
+apache-tomcat-8.5.27-src.tar.gz
+apache-tomcat-8.5.27.tar.gz
+eclipse-inst-linux64.tar.gz
+eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz
+gedit_3.10.4-0ubuntu4_amd64.deb
+jenkins.tar
+jenkins.war
+uex-16.1.0.22_amd64.tar.gz
+osgdev@Capstone-031:~/ansilab$ ls /home/osgdev/resources
+apache-tomcat-7.0.82  server.xml.j2
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources
+osgdev@Capstone-031:~/resources$ vi server.xml.j2
+osgdev@Capstone-031:~/resources$ vi server.xml.j2
+osgdev@Capstone-031:~/resources$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'^C
+osgdev@Capstone-031:~/resources$ cd ..
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m copy -a 'src=/home/osgdev/resources/server.xml.j2 dest=/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml'
+localhost | SUCCESS => {
+    "changed": true, 
+    "checksum": "dd8b8ac2efaaf0cdc7e6c78caeb0f1a86d5b6489", 
+    "dest": "/home/osgdev/resources/apache-tomcat-7.0.82/conf/server.xml", 
+    "gid": 999, 
+    "group": "docker", 
+    "md5sum": "e833ce6c1c323a78677a22041c4cf15b", 
+    "mode": "0600", 
+    "owner": "osgdev", 
+    "size": 6613, 
+    "src": "/home/osgdev/.ansible/tmp/ansible-tmp-1528781354.49-41869991395869/source", 
+    "state": "file", 
+    "uid": 1000
+}
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82/conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+Catalina             context.xml         tomcat-users.xml
+catalina.policy      logging.properties  web.xml
+catalina.properties  server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd 
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | SUCCESS | rc=0 >>
+Tomcat started.
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | SUCCESS | rc=0 >>
+Tomcat started.
+
+osgdev@Capstone-031:~/ansilab$ cd /home/osgdev/resources/apache-tomcat-7.0.82
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ ls
+bin  conf  lib  LICENSE  logs  NOTICE  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd logs
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/logs$ ls
+catalina.2018-06-12.log  host-manager.2018-06-12.log  localhost_access_log.2018-06-12.txt
+catalina.out             localhost.2018-06-12.log     manager.2018-06-12.log
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/logs$ cd ..
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd bin
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ ls
+bootstrap.jar       commons-daemon.jar            daemon.sh         setclasspath.sh  startup.sh            tool-wrapper.sh
+catalina.bat        commons-daemon-native.tar.gz  digest.bat        shutdown.bat     tomcat-juli.jar       version.bat
+catalina.sh         configtest.bat                digest.sh         shutdown.sh      tomcat-native.tar.gz  version.sh
+catalina-tasks.xml  configtest.sh                 setclasspath.bat  startup.bat      tool-wrapper.bat
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/bin$ cd ..
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ ls
+bin  conf  lib  LICENSE  logs  NOTICE  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82$ cd conf
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ ls
+Catalina  catalina.policy  catalina.properties  context.xml  logging.properties  server.xml  tomcat-users.xml  web.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi web.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ vi server.xml
+osgdev@Capstone-031:~/resources/apache-tomcat-7.0.82/conf$ cd 
+osgdev@Capstone-031:~$ cd ansilab
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/shutdown.sh'
+localhost | SUCCESS | rc=0 >>
+
+
+osgdev@Capstone-031:~/ansilab$ ansible localhost -m shell -a '/home/osgdev/resources/apache-tomcat-7.0.82/bin/startup.sh'
+localhost | SUCCESS | rc=0 >>
+Tomcat started.
+
+osgdev@Capstone-031:~/ansilab$ cat echo.yml
+cat: echo.yml: No such file or directory
+osgdev@Capstone-031:~/ansilab$ ci echo.yml
+The program 'ci' is currently not installed. You can install it by typing:
+sudo apt install rcs
+osgdev@Capstone-031:~/ansilab$ vi echo.yml
+osgdev@Capstone-031:~/ansilab$ cat echo.yml
+- hosts: localhost
+  tasks: 
+   - name: use echo command
+     command: 'echo "Hello World"'
+osgdev@Capstone-031:~/ansilab$ ansible-playbook -v echo.yml
+Using /home/osgdev/ansilab/ansible.cfg as config file
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [use echo command] ********************************************************
+changed: [localhost] => {"changed": true, "cmd": ["echo", "Hello World"], "delta": "0:00:00.002938", "end": "2018-06-12 11:11:27.427781", "rc": 0, "start": "2018-06-12 11:11:27.424843", "stderr": "", "stderr_lines": [], "stdout": "Hello World", "stdout_lines": ["Hello World"]}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ cat hostname.yml
+cat: hostname.yml: No such file or directory
+osgdev@Capstone-031:~/ansilab$ vi hostname.yml
+osgdev@Capstone-031:~/ansilab$ echo
+
+osgdev@Capstone-031:~/ansilab$ ansible-playbook hostname.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [user hostname command] ***************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ hostname
+Capstone-031
+osgdev@Capstone-031:~/ansilab$ echo
+
+osgdev@Capstone-031:~/ansilab$ vi resolv.conf
+osgdev@Capstone-031:~/ansilab$ cat resolv.conf
+cat: resolv.conf: No such file or directory
+osgdev@Capstone-031:~/ansilab$ vi resolv.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook resolv.yaml
+ERROR! the playbook: resolv.yaml could not be found
+osgdev@Capstone-031:~/ansilab$ ansible-playbook resolv.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [use shell command] *******************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ ansible-playbook -v resolv.yml
+Using /home/osgdev/ansilab/ansible.cfg as config file
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [use shell command] *******************************************************
+changed: [localhost] => {"changed": true, "cmd": "cat /etc/resolv.conf", "delta": "0:00:00.004341", "end": "2018-06-12 11:17:08.472953", "rc": 0, "start": "2018-06-12 11:17:08.468612", "stderr": "", "stderr_lines": [], "stdout": "# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)\n#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN\nnameserver 10.198.50.100\nnameserver 10.198.50.200\nsearch wipro.com", "stdout_lines": ["# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)", "#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN", "nameserver 10.198.50.100", "nameserver 10.198.50.200", "search wipro.com"]}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ vi file.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook -v file.yml
+Using /home/osgdev/ansilab/ansible.cfg as config file
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [create a folder] *********************************************************
+changed: [localhost] => {"changed": true, "gid": 999, "group": "docker", "mode": "0755", "owner": "osgdev", "path": "/home/osgdev/ansilab/wipro", "size": 4096, "state": "directory", "uid": 1000}
+
+TASK [create a file] ***********************************************************
+changed: [localhost] => {"changed": true, "dest": "/home/osgdev/ansilab/wipro/newfile", "gid": 999, "group": "docker", "mode": "0644", "owner": "osgdev", "size": 0, "state": "file", "uid": 1000}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=3    changed=2    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  ansiserver  file.yml      resolv.yml     tomcat
+ansible.log  day13.log   hostname.yml  roles          wipro
+ansible.txt  echo.yml    nodejs        server.xml.j2
+osgdev@Capstone-031:~/ansilab$ ls wipro
+newfile
+osgdev@Capstone-031:~/ansilab$ vi file1.yml
+osgdev@Capstone-031:~/ansilab$ ansible-playbook -v file1.yml
+Using /home/osgdev/ansilab/ansible.cfg as config file
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [create a folder] *********************************************************
+changed: [localhost] => {"changed": true, "gid": 999, "group": "docker", "mode": "0755", "owner": "osgdev", "path": "/home/osgdev/ansilab/Directory", "size": 4096, "state": "directory", "uid": 1000}
+
+TASK [create a file] ***********************************************************
+changed: [localhost] => {"changed": true, "dest": "/home/osgdev/ansilab/Directory/file1", "gid": 999, "group": "docker", "mode": "0644", "owner": "osgdev", "size": 0, "state": "file", "uid": 1000}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=3    changed=2    unreachable=0    failed=0   
+
+osgdev@Capstone-031:~/ansilab$ ls
+ansible.cfg  day13.log  file.yml      roles
+ansible.log  Directory  hostname.yml  server.xml.j2
+ansible.txt  echo.yml   nodejs        tomcat
+ansiserver   file1.yml  resolv.yml    wipro
+osgdev@Capstone-031:~/ansilab$ ls Directory
+
+
+
+
+---
+# tasks file for ./roles/staff_login
+#- name: copy the tomcat tar file 
+#  copy:
+#    src: /home/osgdev/myDownloads/apache-tomcat-7.0.82.tar.gz
+#    dest: "{{home}}/staff/"
+
+#- name: untar the tomcat tar file
+#  unarchive: 
+#    src: /home/osgdev/myDownloads/apache-tomcat-7.0.82.tar.gz
+#    dest: "{{home}}/staff/"
+
+
+- name: change the tomcat port
+  template:
+   src: server.xml.j2
+   dest: "{{tomcat_home}}/conf/server.xml"
+#  notify: start the tomcat services
+
+- name: Download the war file to webapps folder
+  get_url: url=http://10.199.10.74:5040/artifactory/libs-snapshot-local/Capstone/StaffLoginPortal/0.0.1-SNAPSHOT/StaffLoginPortal-0.0.1-20180810.083209-21.war dest="{{tomcat_home}}/webapps/"
+ 
+#- name: Download the war file to webapps folder
+#  get_url: url=http://10.199.10.74:5040/artifactory/libs-snapshot-local/Capstone/StaffLoginPortal/{{project_version.stdout}}/StaffLoginPortal-{{project_version.stdout}}.war dest="{{tomcat_home}}/webapps/"
+
+# name: copy the war file to webapps folder
+# copy:
+#   src: /home/osgdev/Downloads/StaffLoginPortal(1).war
+#   dest: "{{tomcat_home}}/webapps/"
+
+#- name: remove webapp dir contents
+#  file: 'path="{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180727.170531-11.war" state=absent'
+
+
+#- name: moving war file
+#  command: mv {{tomcat_home}}/webapps/StaffLoginPortal(1).war {{tomcat_home}}/webapps/Staff.war
+
+- name: stop the tomcat services
+  shell: "{{tomcat_home}}/bin/shutdown.sh"
+
+- name: start the tomcat services
+  shell: "{{tomcat_home}}/bin/startup.sh"
+
+#- name: remove webapp dir contents
+#  file: 'path="{{tomcat_home}}/webapps/StaffLoginPortal(1)" state=absent'
+
+#- name: remove several files
+#  file: 
+#    name: "{{item}}"
+#    state: absent 
+#  with_items:
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180730.112129-20.war"
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180730.112129-20"
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal(1).war" 
+#   - "{{tomcat_home}}/webapps/StaffLoginPortal(1)"
+
+---
+# tasks file for ./roles/staff_login
+#- name: copy the tomcat tar file 
+#  copy:
+#    src: /home/osgdev/myDownloads/apache-tomcat-7.0.82.tar.gz
+#    dest: "{{home}}/staff/"
+
+#- name: untar the tomcat tar file
+#  unarchive: 
+#    src: /home/osgdev/myDownloads/apache-tomcat-7.0.82.tar.gz
+#    dest: "{{home}}/staff/"
+
+
+- name: change the tomcat port
+  template:
+   src: server.xml.j2
+   dest: "{{tomcat_home}}/conf/server.xml"
+#  notify: start the tomcat services
+
+- name: Download the war file to webapps folder
+  get_url: url=http://10.199.10.74:5040/artifactory/libs-snapshot-local/Capstone/StaffLoginPortal/0.0.1-SNAPSHOT/StaffLoginPortal-0.0.1-20180810.083209-21.war dest="{{tomcat_home}}/webapps/"
+ 
+#- name: Download the war file to webapps folder
+#  get_url: url=http://10.199.10.74:5040/artifactory/libs-snapshot-local/Capstone/StaffLoginPortal/{{project_version.stdout}}/StaffLoginPortal-{{project_version.stdout}}.war dest="{{tomcat_home}}/webapps/"
+
+# name: copy the war file to webapps folder
+# copy:
+#   src: /home/osgdev/Downloads/StaffLoginPortal(1).war
+#   dest: "{{tomcat_home}}/webapps/"
+
+#- name: remove webapp dir contents
+#  file: 'path="{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180727.170531-11.war" state=absent'
+
+
+#- name: moving war file
+#  command: mv {{tomcat_home}}/webapps/StaffLoginPortal(1).war {{tomcat_home}}/webapps/Staff.war
+
+- name: stop the tomcat services
+  shell: "{{tomcat_home}}/bin/shutdown.sh"
+
+- name: start the tomcat services
+  shell: "{{tomcat_home}}/bin/startup.sh"
+
+#- name: remove webapp dir contents
+#  file: 'path="{{tomcat_home}}/webapps/StaffLoginPortal(1)" state=absent'
+
+#- name: remove several files
+#  file: 
+#    name: "{{item}}"
+#    state: absent 
+#  with_items:
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180730.112129-20.war"
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal-0.0.1-20180730.112129-20"
+#    - "{{tomcat_home}}/webapps/StaffLoginPortal(1).war" 
+#   - "{{tomcat_home}}/webapps/StaffLoginPortal(1)"
+
+
+
