@@ -1,0 +1,1067 @@
+osgdev@Capstone-031:~/ansilab$ cd ..
+osgdev@Capstone-031:~$ cd dockerlab
+osgdev@Capstone-031:~/dockerlab$ ls
+osgdev@Capstone-031:~/dockerlab$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS               NAMES
+d78b218835fd        ubuntu:16.04        "/bin/bash"         About a minute ago   Up About a minute                       app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         5 hours ago          Up 5 hours                              original
+osgdev@Capstone-031:~/dockerlab$ docker container stop d78b218835fd
+d78b218835fd
+osgdev@Capstone-031:~/dockerlab$ docker container kill app_doc
+app_doc
+osgdev@Capstone-031:~/dockerlab$ docker container pause app_doc
+app_doc
+osgdev@Capstone-031:~/dockerlab$ docker container pause ap^Cdoc
+osgdev@Capstone-031:~/dockerlab$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                  PORTS               NAMES
+d78b218835fd        ubuntu:16.04        "/bin/bash"         9 minutes ago       Up 2 minutes (Paused)                       app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         6 hours ago         Up 5 hours                                  original
+osgdev@Capstone-031:~/dockerlab$ docker container unpause app_doc
+app_doc
+osgdev@Capstone-031:~/dockerlab$ docker container wait app_doc
+
+
+
+
+
+0
+osgdev@Capstone-031:~/dockerlab$ 
+osgdev@Capstone-031:~/dockerlab$ 
+osgdev@Capstone-031:~/dockerlab$ 
+osgdev@Capstone-031:~/dockerlab$ 
+osgdev@Capstone-031:~/dockerlab$ 
+osgdev@Capstone-031:~/dockerlab$ docker system events
+2018-06-13T20:27:06.969149016+05:30 image pull tomcat:8 (name=tomcat)
+2018-06-13T20:27:07.152961542+05:30 container create 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:27:07.614181622+05:30 network connect 465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9 (container=040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1, name=bridge, type=bridge)
+2018-06-13T20:27:08.247484328+05:30 container start 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:29:29.570582642+05:30 container create d834f95c5d21a273a8c6df17118b529a05a1cf21145140a80acf09f98a1c93df (image=tomcat:8, name=tomcat_app)
+2018-06-13T20:29:29.655832694+05:30 network connect 465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9 (container=d834f95c5d21a273a8c6df17118b529a05a1cf21145140a80acf09f98a1c93df, name=bridge, type=bridge)
+2018-06-13T20:29:30.070178589+05:30 container start d834f95c5d21a273a8c6df17118b529a05a1cf21145140a80acf09f98a1c93df (image=tomcat:8, name=tomcat_app)
+2018-06-13T20:31:40.483202217+05:30 container exec_create: pwd  040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:31:40.489014834+05:30 container exec_start: pwd  040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:31:50.939174038+05:30 container exec_create: ls  040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:31:50.956796458+05:30 container exec_start: ls  040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:32:50.231492925+05:30 container exec_create: ls /usr/local/tomcat/webapps 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:32:50.232920925+05:30 container exec_start: ls /usr/local/tomcat/webapps 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:35:27.411804810+05:30 container extract-to-dir 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:35:38.852774772+05:30 container exec_create: ls /usr/local/tomcat/webapps 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:35:38.859579968+05:30 container exec_start: ls /usr/local/tomcat/webapps 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:38:55.391509713+05:30 container exec_create: ls /usr/local/tomcat/webapps/Webapp 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:38:55.394804200+05:30 container exec_start: ls /usr/local/tomcat/webapps/Webapp 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:39:32.388700359+05:30 container exec_create: ls /usr/local/tomcat/webapps/Webapp/index.jsp 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:39:32.391057570+05:30 container exec_start: ls /usr/local/tomcat/webapps/Webapp/index.jsp 040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1 (image=tomcat:8, name=gracious_chandrasekhar)
+2018-06-13T20:41:14.437097522+05:30 container create 51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069 (image=ubuntu:16.04, name=heuristic_lewin)
+2018-06-13T20:41:14.439047145+05:30 container attach 51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069 (image=ubuntu:16.04, name=heuristic_lewin)
+2018-06-13T20:41:15.435208802+05:30 network connect 465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9 (container=51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069, name=bridge, type=bridge)
+2018-06-13T20:41:16.353918706+05:30 container start 51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069 (image=ubuntu:16.04, name=heuristic_lewin)
+2018-06-13T20:41:16.355709836+05:30 container resize 51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069 (height=36, image=ubuntu:16.04, name=heuristic_lewin, width=95)
+2018-06-13T20:41:43.158247955+05:30 container die 51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069 (exitCode=130, image=ubuntu:16.04, name=heuristic_lewin)
+2018-06-13T20:41:43.296891128+05:30 network disconnect 465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9 (container=51d817a53ec0c54e0e34e84111a67b2f9462cb1c9b7064928b0e7cd560a84069, name=bridge, type=bridge)
+2018-06-13T20:42:28.073639501+05:30 image pull ubuntu:14.04 (name=ubuntu)
+2018-06-13T20:42:28.164290869+05:30 container create eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6 (image=ubuntu:14.04, name=keen_noyce)
+2018-06-13T20:42:28.165849834+05:30 container attach eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6 (image=ubuntu:14.04, name=keen_noyce)
+2018-06-13T20:42:28.245891808+05:30 network connect 465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9 (container=eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6, name=bridge, type=bridge)
+2018-06-13T20:42:28.831806428+05:30 container start eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6 (image=ubuntu:14.04, name=keen_noyce)
+2018-06-13T20:42:28.840100597+05:30 container resize eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6 (height=36, image=ubuntu:14.04, name=keen_noyce, width=95)
+^C
+osgdev@Capstone-031:~/dockerlab$ docker container inspect eddae0c6c7b6
+[
+    {
+        "Id": "eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6",
+        "Created": "2018-06-13T15:12:28.077153394Z",
+        "Path": "/bin/bash",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 18408,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-13T15:12:28.810605112Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:578c3e61a98cb5720e7c8fc152017be1dff373ebd72a32bbe6e328234efc8d1a",
+        "ResolvConfPath": "/var/lib/docker/containers/eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6/hostname",
+        "HostsPath": "/var/lib/docker/containers/eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6/hosts",
+        "LogPath": "/var/lib/docker/containers/eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6/eddae0c6c7b644340a0bd965654c9be191b5bbae8277f57e2503b30e0b13f8d6-json.log",
+        "Name": "/keen_noyce",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3c4ee9629001191e7811724dd18b9fb144cfbfb3541ce76cbf0b7fad75711e53-init/diff:/var/lib/docker/overlay2/f54f5c8839b0e3b2be0ab5c8105e2116366a366d6a62c4ae8b272c86624c6b9e/diff:/var/lib/docker/overlay2/5cbe8b1578737485b81610b716b8f0adeb394e13147084772a49e69744674b68/diff:/var/lib/docker/overlay2/ceaf8142fb465958eaa9a9ffcd327213196ffc15470b9e213489869f83c2ac70/diff:/var/lib/docker/overlay2/f01f875616bab57db8e851132de750065d741b9099385487611eaaf9749d3937/diff:/var/lib/docker/overlay2/6ed4ba79a8efc2e3899cdcdc8b0c6367e2a5271d4bfbff48cb7d0fe740b9542b/diff",
+                "MergedDir": "/var/lib/docker/overlay2/3c4ee9629001191e7811724dd18b9fb144cfbfb3541ce76cbf0b7fad75711e53/merged",
+                "UpperDir": "/var/lib/docker/overlay2/3c4ee9629001191e7811724dd18b9fb144cfbfb3541ce76cbf0b7fad75711e53/diff",
+                "WorkDir": "/var/lib/docker/overlay2/3c4ee9629001191e7811724dd18b9fb144cfbfb3541ce76cbf0b7fad75711e53/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "eddae0c6c7b6",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "ArgsEscaped": true,
+            "Image": "ubuntu:14.04",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "8faf3f7d2917ccdaeec7873d23c2da75a048d32cd7dfbb2c06ea3f00f01b6369",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/8faf3f7d2917",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "71dbaa2a9a48094da890ba3199c50b7fa3574417d192a699982273a7adc252ce",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.6",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:06",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9",
+                    "EndpointID": "71dbaa2a9a48094da890ba3199c50b7fa3574417d192a699982273a7adc252ce",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.6",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:06",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+osgdev@Capstone-031:~/dockerlab$ script day17.1.log
+Script started, file is day17.1.log
+osgdev@Capstone-031:~/dockerlab$ docker container run -it ubuntu:14.04
+root@3dc8d8da7c1f:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 02:42:ac:11:00:07  
+          inet addr:172.17.0.7  Bcast:172.17.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:16 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2383 (2.3 KB)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+root@3dc8d8da7c1f:/# ping 172.17.0.6
+PING 172.17.0.6 (172.17.0.6) 56(84) bytes of data.
+64 bytes from 172.17.0.6: icmp_seq=1 ttl=64 time=0.208 ms
+64 bytes from 172.17.0.6: icmp_seq=2 ttl=64 time=0.124 ms
+64 bytes from 172.17.0.6: icmp_seq=3 ttl=64 time=0.173 ms
+64 bytes from 172.17.0.6: icmp_seq=4 ttl=64 time=0.110 ms
+64 bytes from 172.17.0.6: icmp_seq=5 ttl=64 time=0.110 ms
+^C
+--- 172.17.0.6 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4000ms
+rtt min/avg/max/mdev = 0.110/0.145/0.208/0.039 ms
+root@3dc8d8da7c1f:/# docker network inspect bridge
+bash: docker: command not found
+root@3dc8d8da7c1f:/# exit
+exit
+
+osgdev@Capstone-031:~/dockerlab$ docker network inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "465f4b8648786db098e757898d8456e539ca91be8392c88b923ae4c5ebc176d9",
+        "Created": "2018-06-01T15:47:33.557593079+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "040878f4a252e3ed892939553ed35c0fbd96561a29c407b3a80e898315d3a2e1": {
+                "Name": "gracious_chandrasekhar",
+                "EndpointID": "18d28b448891bf40fc700ebe9f4855ca589cdb8573dc29a97aa4a49d8f54fb8f",
+                "MacAddress": "02:42:ac:11:00:04",
+                "IPv4Address": "172.17.0.4/16",
+                "IPv6Address": ""
+            },
+            "38a17a84403728197316c9a9f1b2ae23f5e2d2606286a5466b943b9a988855bf": {
+                "Name": "confident_nightingale",
+                "EndpointID": "62b13e0a765ead124bb1f21e217a8ae3cbe288c2c77cc62e6ee175e39aa40b6d",
+                "MacAddress": "02:42:ac:11:00:06",
+                "IPv4Address": "172.17.0.6/16",
+                "IPv6Address": ""
+            },
+            "d78b218835fd9007ab530324fc3f2c3d118cdca894beac3f6e4641e105394530": {
+                "Name": "app_doc",
+                "EndpointID": "aab4b305b76b7e1d9d0bd630abf9e7ec81fe19a4e6d3d26cb84d6fa63ff7c8bb",
+                "MacAddress": "02:42:ac:11:00:03",
+                "IPv4Address": "172.17.0.3/16",
+                "IPv6Address": ""
+            },
+            "d834f95c5d21a273a8c6df17118b529a05a1cf21145140a80acf09f98a1c93df": {
+                "Name": "tomcat_app",
+                "EndpointID": "186ff8b0cc56b0fca6475f1c3bc33ffaaeb37c00f78f721cbdafa9ad95b801b8",
+                "MacAddress": "02:42:ac:11:00:05",
+                "IPv4Address": "172.17.0.5/16",
+                "IPv6Address": ""
+            },
+            "ff7045913da2f111c828810a84eebff92bf933fe7aa42076df45afcf87d16c78": {
+                "Name": "original",
+                "EndpointID": "206dc19af4a8e646db59a3c9cbfdf28723b3aabbdaee344db5eab600a923e936",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+5abcb7f5625a        new-net             bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker network create net
+254f9bafa00ff351b2f5cb5540cc3046d0eb07e38ddf4e7d16a88fbd4ab27228
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+254f9bafa00f        net                 bridge              local
+5abcb7f5625a        new-net             bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --net net
+"docker container run" requires at least 1 argument.
+See 'docker container run --help'.
+
+Usage:  docker container run [OPTIONS] IMAGE [COMMAND] [ARG...] [flags]
+
+Run a command in a new container
+osgdev@Capstone-031:~/dockerlab$ docker container run --help
+
+Usage:	docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+
+Options:
+      --add-host list                  Add a custom host-to-IP
+                                       mapping (host:ip)
+  -a, --attach list                    Attach to STDIN, STDOUT or
+                                       STDERR
+      --blkio-weight uint16            Block IO (relative
+                                       weight), between 10 and
+                                       1000, or 0 to disable
+                                       (default 0)
+      --blkio-weight-device list       Block IO weight (relative
+                                       device weight) (default [])
+      --cap-add list                   Add Linux capabilities
+      --cap-drop list                  Drop Linux capabilities
+      --cgroup-parent string           Optional parent cgroup for
+                                       the container
+      --cidfile string                 Write the container ID to
+                                       the file
+      --cpu-period int                 Limit CPU CFS (Completely
+                                       Fair Scheduler) period
+      --cpu-quota int                  Limit CPU CFS (Completely
+                                       Fair Scheduler) quota
+      --cpu-rt-period int              Limit CPU real-time period
+                                       in microseconds
+      --cpu-rt-runtime int             Limit CPU real-time
+                                       runtime in microseconds
+  -c, --cpu-shares int                 CPU shares (relative weight)
+      --cpus decimal                   Number of CPUs
+      --cpuset-cpus string             CPUs in which to allow
+                                       execution (0-3, 0,1)
+      --cpuset-mems string             MEMs in which to allow
+                                       execution (0-3, 0,1)
+  -d, --detach                         Run container in
+                                       background and print
+                                       container ID
+      --detach-keys string             Override the key sequence
+                                       for detaching a container
+      --device list                    Add a host device to the
+                                       container
+      --device-cgroup-rule list        Add a rule to the cgroup
+                                       allowed devices list
+      --device-read-bps list           Limit read rate (bytes per
+                                       second) from a device
+                                       (default [])
+      --device-read-iops list          Limit read rate (IO per
+                                       second) from a device
+                                       (default [])
+      --device-write-bps list          Limit write rate (bytes
+                                       per second) to a device
+                                       (default [])
+      --device-write-iops list         Limit write rate (IO per
+                                       second) to a device
+                                       (default [])
+      --disable-content-trust          Skip image verification
+                                       (default true)
+      --dns list                       Set custom DNS servers
+      --dns-option list                Set DNS options
+      --dns-search list                Set custom DNS search domains
+      --entrypoint string              Overwrite the default
+                                       ENTRYPOINT of the image
+  -e, --env list                       Set environment variables
+      --env-file list                  Read in a file of
+                                       environment variables
+      --expose list                    Expose a port or a range
+                                       of ports
+      --group-add list                 Add additional groups to join
+      --health-cmd string              Command to run to check health
+      --health-interval duration       Time between running the
+                                       check (ms|s|m|h) (default 0s)
+      --health-retries int             Consecutive failures
+                                       needed to report unhealthy
+      --health-start-period duration   Start period for the
+                                       container to initialize
+                                       before starting
+                                       health-retries countdown
+                                       (ms|s|m|h) (default 0s)
+      --health-timeout duration        Maximum time to allow one
+                                       check to run (ms|s|m|h)
+                                       (default 0s)
+      --help                           Print usage
+  -h, --hostname string                Container host name
+      --init                           Run an init inside the
+                                       container that forwards
+                                       signals and reaps processes
+  -i, --interactive                    Keep STDIN open even if
+                                       not attached
+      --ip string                      IPv4 address (e.g.,
+                                       172.30.100.104)
+      --ip6 string                     IPv6 address (e.g.,
+                                       2001:db8::33)
+      --ipc string                     IPC mode to use
+      --isolation string               Container isolation technology
+      --kernel-memory bytes            Kernel memory limit
+  -l, --label list                     Set meta data on a container
+      --label-file list                Read in a line delimited
+                                       file of labels
+      --link list                      Add link to another container
+      --link-local-ip list             Container IPv4/IPv6
+                                       link-local addresses
+      --log-driver string              Logging driver for the
+                                       container
+      --log-opt list                   Log driver options
+      --mac-address string             Container MAC address
+                                       (e.g., 92:d0:c6:0a:29:33)
+  -m, --memory bytes                   Memory limit
+      --memory-reservation bytes       Memory soft limit
+      --memory-swap bytes              Swap limit equal to memory
+                                       plus swap: '-1' to enable
+                                       unlimited swap
+      --memory-swappiness int          Tune container memory
+                                       swappiness (0 to 100)
+                                       (default -1)
+      --mount mount                    Attach a filesystem mount
+                                       to the container
+      --name string                    Assign a name to the container
+      --network string                 Connect a container to a
+                                       network (default "default")
+      --network-alias list             Add network-scoped alias
+                                       for the container
+      --no-healthcheck                 Disable any
+                                       container-specified HEALTHCHECK
+      --oom-kill-disable               Disable OOM Killer
+      --oom-score-adj int              Tune host's OOM
+                                       preferences (-1000 to 1000)
+      --pid string                     PID namespace to use
+      --pids-limit int                 Tune container pids limit
+                                       (set -1 for unlimited)
+      --privileged                     Give extended privileges
+                                       to this container
+  -p, --publish list                   Publish a container's
+                                       port(s) to the host
+  -P, --publish-all                    Publish all exposed ports
+                                       to random ports
+      --read-only                      Mount the container's root
+                                       filesystem as read only
+      --restart string                 Restart policy to apply
+                                       when a container exits
+                                       (default "no")
+      --rm                             Automatically remove the
+                                       container when it exits
+      --runtime string                 Runtime to use for this
+                                       container
+      --security-opt list              Security Options
+      --shm-size bytes                 Size of /dev/shm
+      --sig-proxy                      Proxy received signals to
+                                       the process (default true)
+      --stop-signal string             Signal to stop a container
+                                       (default "SIGTERM")
+      --stop-timeout int               Timeout (in seconds) to
+                                       stop a container
+      --storage-opt list               Storage driver options for
+                                       the container
+      --sysctl map                     Sysctl options (default map[])
+      --tmpfs list                     Mount a tmpfs directory
+  -t, --tty                            Allocate a pseudo-TTY
+      --ulimit ulimit                  Ulimit options (default [])
+  -u, --user string                    Username or UID (format:
+                                       <name|uid>[:<group|gid>])
+      --userns string                  User namespace to use
+      --uts string                     UTS namespace to use
+  -v, --volume list                    Bind mount a volume
+      --volume-driver string           Optional volume driver for
+                                       the container
+      --volumes-from list              Mount volumes from the
+                                       specified container(s)
+  -w, --workdir string                 Working directory inside
+                                       the container
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --net net ubuntu:14.04
+root@90ee47dbc436:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 02:42:ac:14:00:02  
+          inet addr:172.20.0.2  Bcast:172.20.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:39 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:5908 (5.9 KB)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+root@90ee47dbc436:/# exit        
+exit
+osgdev@Capstone-031:~/dockerlab$ docker container inspect net
+[]
+Error: No such container: net
+osgdev@Capstone-031:~/dockerlab$ docker network inspect net
+[
+    {
+        "Name": "net",
+        "Id": "254f9bafa00ff351b2f5cb5540cc3046d0eb07e38ddf4e7d16a88fbd4ab27228",
+        "Created": "2018-06-14T07:40:09.927248843+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.20.0.0/16",
+                    "Gateway": "172.20.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+254f9bafa00f        net                 bridge              local
+5abcb7f5625a        new-net             bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge
+"docker network connect" requires exactly 2 arguments.
+See 'docker network connect --help'.
+
+Usage:  docker network connect [OPTIONS] NETWORK CONTAINER [flags]
+
+Connect a container to a network
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge 254f9bafa00f
+Error response from daemon: No such container: 254f9bafa00f
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge 254f9bafa00f
+Error response from daemon: No such container: 254f9bafa00f
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge net
+Error response from daemon: No such container: net
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge 254f9bafa00f
+Error response from daemon: No such container: 254f9bafa00f
+osgdev@Capstone-031:~/dockerlab$ docker network disconnect net
+"docker network disconnect" requires exactly 2 arguments.
+See 'docker network disconnect --help'.
+
+Usage:  docker network disconnect [OPTIONS] NETWORK CONTAINER [flags]
+
+Disconnect a container from a network
+osgdev@Capstone-031:~/dockerlab$ docker network disconnect net 254f9bafa00f
+Error response from daemon: No such container: 254f9bafa00f
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+254f9bafa00f        net                 bridge              local
+5abcb7f5625a        new-net             bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker network disconnect net 5abcb7f5625a
+Error response from daemon: No such container: 5abcb7f5625a
+osgdev@Capstone-031:~/dockerlab$ docker network connect new-net 5abcb7f5625a
+Error response from daemon: No such container: 5abcb7f5625a
+osgdev@Capstone-031:~/dockerlab$ docker network disconnect new-net 5abcb7f5625a
+Error response from daemon: No such container: 5abcb7f5625a
+osgdev@Capstone-031:~/dockerlab$ docker network inspect new-net
+[
+    {
+        "Name": "new-net",
+        "Id": "5abcb7f5625a860d20d79fd50f6610bde57690d203a879e29ae81de2ea95d9a8",
+        "Created": "2018-06-08T17:59:39.701516679+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+osgdev@Capstone-031:~/dockerlab$ docker network rm new-net
+new-net
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+254f9bafa00f        net                 bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker network create 
+"docker network create" requires exactly 1 argument.
+See 'docker network create --help'.
+
+Usage:  docker network create [OPTIONS] NETWORK [flags]
+
+Create a network
+osgdev@Capstone-031:~/dockerlab$ docker network create net new-net
+"docker network create" requires exactly 1 argument.
+See 'docker network create --help'.
+
+Usage:  docker network create [OPTIONS] NETWORK [flags]
+
+Create a network
+osgdev@Capstone-031:~/dockerlab$ docker network create new-net ubuntu:16.04
+"docker network create" requires exactly 1 argument.
+See 'docker network create --help'.
+
+Usage:  docker network create [OPTIONS] NETWORK [flags]
+
+Create a network
+osgdev@Capstone-031:~/dockerlab$ docker network create new-net 
+132b3793f72aff60a4cb9a9554f2696ea0c8d9df53e05d8ab6ac96347484cd20
+osgdev@Capstone-031:~/dockerlab$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+465f4b864878        bridge              bridge              local
+51b47d69d671        docker_gwbridge     bridge              local
+2f17cc107ea7        host                host                local
+s7k9jrs72it1        ingress             overlay             swarm
+254f9bafa00f        net                 bridge              local
+132b3793f72a        new-net             bridge              local
+23c983327ebe        none                null                local
+osgdev@Capstone-031:~/dockerlab$ docker network connect 132b3793f72a
+"docker network connect" requires exactly 2 arguments.
+See 'docker network connect --help'.
+
+Usage:  docker network connect [OPTIONS] NETWORK CONTAINER [flags]
+
+Connect a container to a network
+osgdev@Capstone-031:~/dockerlab$ docker network connect bridge 132b3793f72a
+Error response from daemon: No such container: 132b3793f72a
+osgdev@Capstone-031:~/dockerlab$ ls
+day17.1.log
+osgdev@Capstone-031:~/dockerlab$ mkdir share
+osgdev@Capstone-031:~/dockerlab$ ls
+day17.1.log  share
+osgdev@Capstone-031:~/dockerlab$ docker container run -it -v /home/osgdev/dockerlab/share/:/FROMHOST ubuntu:16.04
+root@0b97a84def6d:/# ls
+FROMHOST  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin       dev   home  lib64  mnt    proc  run   srv   tmp  var
+root@0b97a84def6d:/# cd FROMHOST
+root@0b97a84def6d:/FROMHOST# ls
+root@0b97a84def6d:/FROMHOST# touch test1
+root@0b97a84def6d:/FROMHOST# ls
+test1
+root@0b97a84def6d:/FROMHOST# cat test1
+put first line from container
+root@0b97a84def6d:/FROMHOST# vi test1
+bash: vi: command not found
+root@0b97a84def6d:/FROMHOST# sudo vi test1
+bash: sudo: command not found
+root@0b97a84def6d:/FROMHOST# cat >>test1
+second line from the system
+^C
+root@0b97a84def6d:/FROMHOST# cat test1
+put first line from container
+second line from the system
+root@0b97a84def6d:/FROMHOST# ^C
+root@0b97a84def6d:/FROMHOST# exit
+exit
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-from b97a84def6d ubuntu:16.04
+docker: Error response from daemon: No such container: b97a84def6d.
+See 'docker run --help'.
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-from b97a84def6d ubuntu:14.04
+docker: Error response from daemon: No such container: b97a84def6d.
+See 'docker run --help'.
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-fromb97a84def6d ubuntu:14.04
+unknown flag: --volumes-fromb97a84def6d
+See 'docker container run --help'.
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-fromb97a84def6d ubuntu:16.04
+unknown flag: --volumes-fromb97a84def6d
+See 'docker container run --help'.
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-from b97a84def6d ubuntu:16.04
+docker: Error response from daemon: No such container: b97a84def6d.
+See 'docker run --help'.
+osgdev@Capstone-031:~/dockerlab$ docker container run -it --volumes-from FROMHOST ubuntu:16.04
+docker: Error response from daemon: No such container: FROMHOST.
+See 'docker run --help'.
+osgdev@Capstone-031:~/dockerlab$ cd
+osgdev@Capstone-031:~$ docker container run -it --volumes-from b97a84def6d ubuntu:16.04
+docker: Error response from daemon: No such container: b97a84def6d.
+See 'docker run --help'.
+osgdev@Capstone-031:~$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 11 hours         0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         12 hours ago        Up 12 hours                                   app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                   original
+osgdev@Capstone-031:~$ docker container run -it -v^C78b218835fd ubuntu:16.04
+osgdev@Capstone-031:~$ docker container ls -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS                     NAMES
+0b97a84def6d        ubuntu:16.04        "/bin/bash"         26 minutes ago      Exited (130) 16 minutes ago                             dazzling_bardeen
+90ee47dbc436        ubuntu:14.04        "/bin/bash"         39 minutes ago      Exited (0) 38 minutes ago                               nifty_keller
+3dc8d8da7c1f        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (127) 43 minutes ago                             sleepy_spence
+38a17a844037        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) 39 minutes ago                               confident_nightingale
+eddae0c6c7b6        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) 12 hours ago                                 keen_noyce
+51d817a53ec0        ubuntu:16.04        "/bin/bash"         12 hours ago        Exited (130) 12 hours ago                               heuristic_lewin
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 11 hours                   0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours                   0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         12 hours ago        Up 12 hours                                             app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                             original
+osgdev@Capstone-031:~$ docker container run -it --volumes-from d78b218835fd ubuntu:16.04
+root@2fea68b9aa8c:/# ls 
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@2fea68b9aa8c:/# exit
+exit
+osgdev@Capstone-031:~$ docker container run -it -v /home/osgdev/dockerlab/share/:/TEST ubuntu:16.04
+root@b4e57c958d93:/# ls
+TEST  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin   dev   home  lib64  mnt    proc  run   srv   tmp  var
+root@b4e57c958d93:/# cd TEST
+root@b4e57c958d93:/TEST# touch docker
+root@b4e57c958d93:/TEST# ls
+docker  test1
+root@b4e57c958d93:/TEST# vi docker
+bash: vi: command not found
+root@b4e57c958d93:/TEST# cat >>docker
+welcome to docker learning^C
+root@b4e57c958d93:/TEST# cat docker
+root@b4e57c958d93:/TEST# cat >>docker
+welcome to docker learning
+^C
+root@b4e57c958d93:/TEST# cat docker
+welcome to docker learning
+root@b4e57c958d93:/TEST# cat docker
+welcome to docker learning the opps part of Devops
+root@b4e57c958d93:/TEST# ^C
+root@b4e57c958d93:/TEST# exit
+exit
+osgdev@Capstone-031:~$ docker container run -it --volumes-from b4e57c958d93 ubuntu:16.04
+root@ba2fd95a6adc:/# ls
+TEST  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin   dev   home  lib64  mnt    proc  run   srv   tmp  var
+root@ba2fd95a6adc:/# cd TEST
+root@ba2fd95a6adc:/TEST# ls
+docker  test1
+root@ba2fd95a6adc:/TEST# cat docker
+welcome to docker learning the opps part of Devops
+root@ba2fd95a6adc:/TEST# exit
+exit
+osgdev@Capstone-031:~$ docker container run -d -p 11022:8080 --name warcopy tomcat:8
+1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4
+docker: Error response from daemon: driver failed programming external connectivity on endpoint warcopy (4d93d3ea1fb190c8c7cb351673e9191d1331b7d7ceef18e4b38012494ef65cd9): Bind for 0.0.0.0:11022 failed: port is already allocated.
+osgdev@Capstone-031:~$ mkdir web
+osgdev@Capstone-031:~$ mv ./Webapp.war ./web/
+mv: cannot stat './Webapp.war': No such file or directory
+osgdev@Capstone-031:~$ mv /home/osgdev/wipro-gcc/Wipro-gcc/target/Wipro.war ./web/
+osgdev@Capstone-031:~$ ls ./web/
+Wipro.war
+osgdev@Capstone-031:~$ cp /home/osgdev/wipro-gcc/Webapp/target/Webapp.war ./web/
+osgdev@Capstone-031:~$ ls ./web/
+Webapp.war  Wipro.war
+osgdev@Capstone-031:~$ docker container cp /home/osgdev/web/Webapp.war warcopy:/usr/local/tomcat/webapps
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+Error response from daemon: Container 1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4 is not running
+osgdev@Capstone-031:~$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         13 hours ago        Up 12 hours                                   app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                   original
+osgdev@Capstone-031:~$ docker container cp /home/osgdev/web/Webapp.war tomcat_app:/usr/local/tomcat/webapps
+osgdev@Capstone-031:~$ docker container exec tomcat_App /usr/local/tomcat/webapps
+Error: No such container: tomcat_App
+osgdev@Capstone-031:~$ docker container run -d -p 11022:8080 --name warcopy tomcat:8
+docker: Error response from daemon: Conflict. The container name "/warcopy" is already in use by container "1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+osgdev@Capstone-031:~$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         13 hours ago        Up 12 hours                                   app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                   original
+osgdev@Capstone-031:~$ docker container ls -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                           PORTS                     NAMES
+1452c778c1f0        tomcat:8            "catalina.sh run"   13 minutes ago      Created                                                    warcopy
+ba2fd95a6adc        ubuntu:16.04        "/bin/bash"         15 minutes ago      Exited (0) 13 minutes ago                                  zealous_neumann
+b4e57c958d93        ubuntu:16.04        "/bin/bash"         28 minutes ago      Exited (130) 22 minutes ago                                reverent_mclean
+2fea68b9aa8c        ubuntu:16.04        "/bin/bash"         29 minutes ago      Exited (0) 28 minutes ago                                  nostalgic_neumann
+0b97a84def6d        ubuntu:16.04        "/bin/bash"         About an hour ago   Exited (130) About an hour ago                             dazzling_bardeen
+90ee47dbc436        ubuntu:14.04        "/bin/bash"         About an hour ago   Exited (0) About an hour ago                               nifty_keller
+3dc8d8da7c1f        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (127) About an hour ago                             sleepy_spence
+38a17a844037        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) About an hour ago                               confident_nightingale
+eddae0c6c7b6        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) 12 hours ago                                    keen_noyce
+51d817a53ec0        ubuntu:16.04        "/bin/bash"         12 hours ago        Exited (130) 12 hours ago                                  heuristic_lewin
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours                      0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours                      0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         13 hours ago        Up 12 hours                                                app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                                original
+osgdev@Capstone-031:~$ ls ./web/
+Webapp.war  Wipro.war
+osgdev@Capstone-031:~$ docker container cp /home/osgdev/web/Webapp.war warcopy:/usr/local/tomcat/webapps
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+Error response from daemon: Container 1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4 is not running
+osgdev@Capstone-031:~$ docker container start 1452c778c1f0
+Error response from daemon: driver failed programming external connectivity on endpoint warcopy (016d01ef6a0dff1837fb73696d9a8b753253c4bcd9513ea9cc46cd2076da3307): Bind for 0.0.0.0:11022 failed: port is already allocated
+Error: failed to start containers: 1452c778c1f0
+osgdev@Capstone-031:~$ docker container start 1452c778c1f0
+Error response from daemon: driver failed programming external connectivity on endpoint warcopy (d7b0381825d1cb847014e2e4745a0da560f85a5a2daa0502a96d37f051675f14): Bind for 0.0.0.0:11022 failed: port is already allocated
+Error: failed to start containers: 1452c778c1f0
+osgdev@Capstone-031:~$ docker container restart 1452c778c1f0
+Error response from daemon: Cannot restart container 1452c778c1f0: driver failed programming external connectivity on endpoint warcopy (f5139e60bb2f4c3e20b17f9518ad7b8befc12e2f30e670717859a706881982eb): Bind for 0.0.0.0:11022 failed: port is already allocated
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+Error response from daemon: Container 1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4 is not running
+osgdev@Capstone-031:~$ docker container restart 1452c778c
+Error response from daemon: Cannot restart container 1452c778c: driver failed programming external connectivity on endpoint warcopy (81cd95a1d18a1dcb392e73b4f2a857c3c0dd63a66067bcd2967e8834749ebb62): Bind for 0.0.0.0:11022 failed: port is already allocated
+osgdev@Capstone-031:~$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+d834f95c5d21        tomcat:8            "catalina.sh run"   12 hours ago        Up 12 hours         0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   13 hours ago        Up 13 hours         0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         13 hours ago        Up 13 hours                                   app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                   original
+osgdev@Capstone-031:~$ docker container ls -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                           PORTS                     NAMES
+1452c778c1f0        tomcat:8            "catalina.sh run"   22 minutes ago      Created                                                    warcopy
+ba2fd95a6adc        ubuntu:16.04        "/bin/bash"         24 minutes ago      Exited (0) 22 minutes ago                                  zealous_neumann
+b4e57c958d93        ubuntu:16.04        "/bin/bash"         36 minutes ago      Exited (130) 31 minutes ago                                reverent_mclean
+2fea68b9aa8c        ubuntu:16.04        "/bin/bash"         38 minutes ago      Exited (0) 37 minutes ago                                  nostalgic_neumann
+0b97a84def6d        ubuntu:16.04        "/bin/bash"         About an hour ago   Exited (130) About an hour ago                             dazzling_bardeen
+90ee47dbc436        ubuntu:14.04        "/bin/bash"         About an hour ago   Exited (0) About an hour ago                               nifty_keller
+3dc8d8da7c1f        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (127) About an hour ago                             sleepy_spence
+38a17a844037        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) About an hour ago                               confident_nightingale
+eddae0c6c7b6        ubuntu:14.04        "/bin/bash"         12 hours ago        Exited (0) 12 hours ago                                    keen_noyce
+51d817a53ec0        ubuntu:16.04        "/bin/bash"         12 hours ago        Exited (130) 12 hours ago                                  heuristic_lewin
+d834f95c5d21        tomcat:8            "catalina.sh run"   13 hours ago        Up 12 hours                      0.0.0.0:11022->8080/tcp   tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   13 hours ago        Up 13 hours                      0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         13 hours ago        Up 13 hours                                                app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         18 hours ago        Up 18 hours                                                original
+osgdev@Capstone-031:~$ docker container stop d834f95c5d21
+d834f95c5d21
+osgdev@Capstone-031:~$ docker container ls -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                       PORTS                     NAMES
+1452c778c1f0        tomcat:8            "catalina.sh run"   About an hour ago   Created                                                warcopy
+ba2fd95a6adc        ubuntu:16.04        "/bin/bash"         2 hours ago         Exited (0) 2 hours ago                                 zealous_neumann
+b4e57c958d93        ubuntu:16.04        "/bin/bash"         2 hours ago         Exited (130) 2 hours ago                               reverent_mclean
+2fea68b9aa8c        ubuntu:16.04        "/bin/bash"         2 hours ago         Exited (0) 2 hours ago                                 nostalgic_neumann
+0b97a84def6d        ubuntu:16.04        "/bin/bash"         2 hours ago         Exited (130) 2 hours ago                               dazzling_bardeen
+90ee47dbc436        ubuntu:14.04        "/bin/bash"         2 hours ago         Exited (0) 2 hours ago                                 nifty_keller
+3dc8d8da7c1f        ubuntu:14.04        "/bin/bash"         13 hours ago        Exited (127) 3 hours ago                               sleepy_spence
+38a17a844037        ubuntu:14.04        "/bin/bash"         13 hours ago        Exited (0) 2 hours ago                                 confident_nightingale
+eddae0c6c7b6        ubuntu:14.04        "/bin/bash"         13 hours ago        Exited (0) 13 hours ago                                keen_noyce
+51d817a53ec0        ubuntu:16.04        "/bin/bash"         13 hours ago        Exited (130) 13 hours ago                              heuristic_lewin
+d834f95c5d21        tomcat:8            "catalina.sh run"   14 hours ago        Exited (143) 6 seconds ago                             tomcat_app
+040878f4a252        tomcat:8            "catalina.sh run"   14 hours ago        Up 14 hours                  0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         14 hours ago        Up 14 hours                                            app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         20 hours ago        Up 19 hours                                            original
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+Error response from daemon: Container 1452c778c1f05aa4db48c1e4590228521befa880e934444fa9ff94cbbf2383f4 is not running
+osgdev@Capstone-031:~$ docker container start 1452c778c1f0
+1452c778c1f0
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+ROOT
+Webapp
+Webapp.war
+docs
+examples
+host-manager
+manager
+osgdev@Capstone-031:~$ docker container cp /home/osgdev/wipro-gcc/Wipro-gcc/target/Wipro.war warcopy:/usr/local/tomcat/webapps
+lstat /home/osgdev/wipro-gcc/Wipro-gcc/target/Wipro.war: no such file or directory
+osgdev@Capstone-031:~$ ls ./war/
+ls: cannot access './war/': No such file or directory
+osgdev@Capstone-031:~$ ls ./web/
+Webapp.war  Wipro.war
+osgdev@Capstone-031:~$ cp ./web/Wipro.war /home/osgdev/wipro-gcc/Wipro-gcc/target
+osgdev@Capstone-031:~$ ls /home/osgdev/wipro-gcc/Wipro-gcc/target
+classes  maven-archiver  test-classes  Wipro.war
+m2e-wtp  maven-status    Wipro-gcc
+osgdev@Capstone-031:~$ docker container cp /home/osgdev/wipro-gcc/Wipro-gcc/target/Wipro.war warcopy:/usr/local/tomcat/webapps
+osgdev@Capstone-031:~$ docker container exec warcopy /usr/local/tomcat/webapps/
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"/usr/local/tomcat/webapps/\": permission denied": unknown
+osgdev@Capstone-031:~$ docker container exec warcopy /usr/local/tomcat/webapps
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"/usr/local/tomcat/webapps\": permission denied": unknown
+osgdev@Capstone-031:~$ docker container exec warcopy ls /usr/local/tomcat/webapps
+ROOT
+Webapp
+Webapp.war
+Wipro
+Wipro.war
+docs
+examples
+host-manager
+manager
+osgdev@Capstone-031:~$ ls web
+Webapp.war  Wipro.war
+osgdev@Capstone-031:~$ docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+1452c778c1f0        tomcat:8            "catalina.sh run"   2 hours ago         Up 7 minutes        0.0.0.0:11022->8080/tcp   warcopy
+040878f4a252        tomcat:8            "catalina.sh run"   14 hours ago        Up 14 hours         0.0.0.0:32769->8080/tcp   gracious_chandrasekhar
+d78b218835fd        ubuntu:16.04        "/bin/bash"         14 hours ago        Up 14 hours                                   app_doc
+ff7045913da2        ubuntu:16.04        "/bin/bash"         20 hours ago        Up 20 hours                                   original
+osgdev@Capstone-031:~$ docker volume
+
+Usage:	docker volume COMMAND
+
+Manage volumes
+
+Options:
+
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+osgdev@Capstone-031:~$ docker volume ls
+DRIVER              VOLUME NAME
+local               21838d9b146451894675bb2a7e7d948add33a9b5935763cf6eab85bc4c83e491
+local               3ee9f70e7c3536cb4eb50966443530a1aae12ac003c049edc0f196928a367ccf
+local               42586ab37c01411feee6330d97cb1301cedb4dcf03303909483ca744d9b0c894
+local               45da15c30fb2be148cdd16b2604a10359c2d2fe2c7639d7a4089108e97a60c25
+local               7ff4669a250badef0c5fa21c1eecd2337e82ea0a633ecac166ba9e15d222d335
+local               d9a79cd7d0cbe7239eed0df9709847fc64f3726b7a69d3277e5076c132e85278
+local               jenkins_home
+osgdev@Capstone-031:~$ docker volume prune
+WARNING! This will remove all volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Volumes:
+3ee9f70e7c3536cb4eb50966443530a1aae12ac003c049edc0f196928a367ccf
+42586ab37c01411feee6330d97cb1301cedb4dcf03303909483ca744d9b0c894
+45da15c30fb2be148cdd16b2604a10359c2d2fe2c7639d7a4089108e97a60c25
+7ff4669a250badef0c5fa21c1eecd2337e82ea0a633ecac166ba9e15d222d335
+d9a79cd7d0cbe7239eed0df9709847fc64f3726b7a69d3277e5076c132e85278
+jenkins_home
+21838d9b146451894675bb2a7e7d948add33a9b5935763cf6eab85bc4c83e491
+
+Total reclaimed space: 435.8MB
+osgdev@Capstone-031:~$ docker volume ls
+DRIVER              VOLUME NAME
+osgdev@Capstone-031:~$ docker volume create foo
+foo
+osgdev@Capstone-031:~$ docker volume ls
+DRIVER              VOLUME NAME
+local               foo
+osgdev@Capstone-031:~$ docker volume inspect foo
+[
+    {
+        "CreatedAt": "2018-06-14T10:19:46+05:30",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/foo/_data",
+        "Name": "foo",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+osgdev@Capstone-031:~$ docker container run -it -v foo:/opt/vol_yes ubuntu:16.04
+root@9e402a9186a3:/# ls /opt
+vol_yes
+root@9e402a9186a3:/# cd /opt/vol_yes
+root@9e402a9186a3:/opt/vol_yes# ls
+root@9e402a9186a3:/opt/vol_yes# touch testfile
+root@9e402a9186a3:/opt/vol_yes# ls
+testfile
+root@9e402a9186a3:/opt/vol_yes# exit
+exit
+osgdev@Capstone-031:~$ 
+
